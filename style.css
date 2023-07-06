@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    background-color: #fafafa;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #27272a;
+    padding: 1rem 2rem;
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+.nav h1 {
+    font-family: "Jost", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+.counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #DCDCDC;
+}
+
+.counter p {
+    font-size: 1rem;
+    color: #333333;
+}
+
+.counter #correct {
+    color: #22c55e;
+}
+
+.counter #incorrect {
+    color: #991b1b;
+}
+
+main {
+    position: relative;
+    height: calc(100vh - 107px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.flags {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    background-color: #22c55e;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.message {
+    display: none;
+    position: absolute;
+    top: 1rem;
+}
+
+.message span {
+    font-size: 1.5rem;
+    color:#22c55e;
+}
+
+#successScreen {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    height: calc(100vh - 55px);
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+}
+
+.question {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+}
+
+.question #phrase,
+#input {
+    font-size: 2rem;
+}
+
+.question #input {
+    font-family: "Outfit", sans-serif;
+    border: 1px solid #464646;
+    outline: none;
+}
+
+#specChars {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#specChars button {
+    font-family: "Outfit", sans-serif;
+    font-size: 1rem;
+    padding: .5rem;
+}
+
+#translation {
+    font-size: 1rem;
+}
+
+#submit {
+    display: block;
+    font-family: "Outfit", sans-serif;
+    font-size: 1rem;
+    color: white;
+    background: #22c55e;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+#retry {
+    display: none;
+    font-family: "Outfit", sans-serif;
+    font-size: 1rem;
+    color: white;
+    background: #991b1b;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+#next {
+    display: none;
+    font-family: "Outfit", sans-serif;
+    font-size: 1rem;
+    color: white;
+    background: #22c55e;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.success__message {
+    font-size: 1.5rem;
+    color:#22c55e;
+}
+
+.success__button {
+    font-family: "Outfit", sans-serif;
+    font-size: 1rem;
+    color: white;
+    background: #22c55e;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 758px) {
+    .nav h1 {
+        font-size: 2rem;
+    }
+
+    .counter p {
+        font-size: 1.5rem;
+    }
+
+    main {
+        height: calc(100vh - 140px);
+    }
+
+    #successScreen {
+        height: calc(100vh - 78px);
+    }
+
+    #translation {
+        font-size: 1.5rem;
+    }
+
+    .success__message {
+        font-size: 2rem;
+    }
+}

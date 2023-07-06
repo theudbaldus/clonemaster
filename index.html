@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Clonemaster</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <h1>Clonemaster</h1>
+    </nav>
+
+    <div class="counter">
+        <p>Correct: <span id="correct">0</span></p>
+        <p>Incorrect: <span id="incorrect">0</span></p>
+        <p>To go: <span id="toGo">5</span></p>
+    </div>
+
+    <main>
+        <div class="flags">
+            <span>🇺🇸 / 🇫🇷</span>
+        </div>
+
+        <div id="message" class="message">
+            <span>Correct !</span>
+        </div>
+
+        <div id="successScreen">
+            <h2 class="success__message">You won the game !</h2>
+            <button class="success__button" id="successButton">Reset</button>
+        </div>
+
+        <div class="question">
+            <p id="phrase">Question</p>
+            <input id="input" />
+        </div>
+
+        <div id="specChars"></div>
+
+        <p id="translation">Translation</p>
+        <button id="submit">Submit</button>
+        <button id="retry">Retry</button>
+        <button id="next">Next ></button>
+    </main>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
