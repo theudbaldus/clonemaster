@@ -65,10 +65,11 @@ calculateInputWidth();
 
 // assign function to input that checks in real time if user's on the right track, if he is, text turns green, otherwise it turns red
 input.addEventListener("input", function () {
-    userInput = this.value;
+    userInput = this.value.toLowerCase();
+    const answerLowerCase = answer.toLowerCase();
 
     for (let i = 0; i < userInput.length; i++) {
-        if (userInput[i] === answer[i]) {
+        if (userInput[i] === answerLowerCase[i]) {
             input.style.color = "#22c55e";
         } else {
             input.style.color = "#991b1b";
@@ -101,14 +102,6 @@ characters.forEach(character => {
     // add each button to the corresponding div
     specCharsDiv.appendChild(button);
 });
-
-// reset counters to initial
-function resetNumbers() {
-    correct = 0;
-    incorrect = 0;
-    toGo = 5;
-    index = 0;
-};
 
 // update text on screen after successful submit
 function updateText() {
