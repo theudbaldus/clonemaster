@@ -1,5 +1,5 @@
 # CLONEMASTER
-![Project screenshot](/screenshot.png)
+![Project screenshot](/public/screenshot.png)
 
 ## TABLE OF CONTENTS
 - [Project Overview](#project-overview)
